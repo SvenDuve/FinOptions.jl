@@ -7,7 +7,7 @@ function GBlackScholes(CallPutFlag, S, X, T, r, b, v)
   # b = r- r_f, gives garman kohlhagen currency options model
 
 
-  include("/Users/svenduve/Google Drive/Derivatives/HaugsBook/Distributions/CND.jl")
+  include("CND.jl")
   d1::Float64
   d2::Float64
 
@@ -27,7 +27,7 @@ end
 
 function KirkSpreadOption(CallPutFlag, S1, S2, X, T, r, b1, b2, v1, v2, cor)
 
-        include("/Users/svenduve/Google Drive/Derivatives/HaugsBook/Distributions/CND.jl")
+        include("CND.jl")
         d1::Float64
         d2::Float64
 
@@ -64,7 +64,7 @@ end
 
 function GeoAveRate(CallPutFlag, S, X, T, r, b, v)
 
-        include("/Users/svenduve/Google Drive/Derivatives/HaugsBook/Distributions/CND.jl")
+        include("CND.jl")
         d1::Float64
         d2::Float64
 

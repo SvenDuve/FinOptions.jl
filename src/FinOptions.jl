@@ -25,17 +25,18 @@ export
         Carry,
         Speed,
         StrikeDelta,
-        RNDensity
+        RNDensity,
+        PutCallParity
 
 
-        include("Black76.jl")
-        include("BlackScholes.jl")
-        include("CND.jl")
-        #include("CNDEV.jl"),
-        include("GBlackScholes.jl")
-        include("GDelta.jl")
-        include("Greeks.jl")
-        include("PutCallParity.jl")
+include("Black76.jl")
+include("BlackScholes.jl")
+include("CND.jl")
+#include("CNDEV.jl"),
+include("GBlackScholes.jl")
+include("GDelta.jl")
+include("Greeks.jl")
+include("PutCallParity.jl")
 
 # package code goes here
 

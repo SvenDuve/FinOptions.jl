@@ -1,6 +1,6 @@
 function GDelta(CallPutFlag, S, X, T, r, b, v)
 
-  require("CND.jl")
+  #require("CND.jl")
 
   d1 = (log(S / X) + (b + v^2 / 2) * T) / (v * sqrt(T))
 
@@ -11,6 +11,5 @@ function GDelta(CallPutFlag, S, X, T, r, b, v)
     delta = -exp((b - r) * T) * CND(-d1)
   end
 
-delta
 
 end
