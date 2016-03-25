@@ -6,11 +6,6 @@ function GBlackScholes(CallPutFlag, S, X, T, r, b, v)
   # b = 0 && r = 0, gives Asay for margined futures options
   # b = r- r_f, gives garman kohlhagen currency options model
 
-
-  include("CND.jl")
-  d1::Float64
-  d2::Float64
-
   d1 = (log(S / X) + (b + v^2 / 2) * T) / (v * sqrt(T))
   d2 = d1 - v * sqrt(T)
 
@@ -27,9 +22,6 @@ end
 
 function KirkSpreadOption(CallPutFlag, S1, S2, X, T, r, b1, b2, v1, v2, cor)
 
-        include("CND.jl")
-        d1::Float64
-        d2::Float64
 
         S = (S1 * exp((b1 - r) * T)) / (S2 * exp((b2 - r) * T) + X * exp((-r) * T))
         F = (S2 * exp((b2 - r) * T)) / (S2 * exp((b2 - r) * T) + X * exp((-r) * T))
@@ -63,10 +55,6 @@ end
 
 
 function GeoAveRate(CallPutFlag, S, X, T, r, b, v)
-
-        include("CND.jl")
-        d1::Float64
-        d2::Float64
 
 
         sigAdj = v / sqrt(3)
