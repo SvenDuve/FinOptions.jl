@@ -31,7 +31,7 @@ export
         include("Black76.jl"),
         include("BlackScholes.jl"),
         include("CND.jl"),
-        include("CNDEV.jl"),
+        #include("CNDEV.jl"),
         include("GBlackScholes.jl"),
         include("GDelta.jl")
         include("Greeks.jl")

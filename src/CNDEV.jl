@@ -25,11 +25,8 @@ end
 
 if X < 0
      r = -r
- end
+end
 
      cndev = r
- end
 
-
-CNDEV(2)
-
+end
