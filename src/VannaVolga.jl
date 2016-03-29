@@ -9,29 +9,29 @@ BFVol = (callVol + putVol) / 2 - ATMVol
 # Put
 
 vega1 = Vega("c", ATMStrike, putStrike, T, r, b, ATMVol)
-volga1 = DvegaDvol("c", ATMStrike, putStrike, T, r, b, ATMVol)
-vanna1 = DDeltaDvol("c", ATMStrike, putStrike, T, r, b, ATMVol)
+volga1 = DVegaDVol("c", ATMStrike, putStrike, T, r, b, ATMVol)
+vanna1 = DDeltaDVol("c", ATMStrike, putStrike, T, r, b, ATMVol)
 
 
 # ATM
 
 vega2 = Vega("c", ATMStrike, ATMStrike, T, r, b, ATMVol)
-volga2 = DvegaDvol("c", ATMStrike, ATMStrike, T, r, b, ATMVol)
-vanna2 = DDeltaDvol("c", ATMStrike, ATMStrike, T, r, b, ATMVol)
+volga2 = DVegaDVol("c", ATMStrike, ATMStrike, T, r, b, ATMVol)
+vanna2 = DDeltaDVol("c", ATMStrike, ATMStrike, T, r, b, ATMVol)
 
 
 # Call
 
 vega3 = Vega("c", ATMStrike, callStrike, T, r, b, ATMVol)
-volga3 = DvegaDvol("c", ATMStrike, callStrike, T, r, b, ATMVol)
-vanna3 = DDeltaDvol("c", ATMStrike, callStrike, T, r, b, ATMVol)
+volga3 = DVegaDVol("c", ATMStrike, callStrike, T, r, b, ATMVol)
+vanna3 = DDeltaDVol("c", ATMStrike, callStrike, T, r, b, ATMVol)
 
 
 # Any Strike K
 
 vegaK = Vega("c", ATMStrike, kStrike, T, r, b, ATMVol)
-volgaK = DvegaDvol("c", ATMStrike, kStrike, T, r, b, ATMVol)
-vannaK = DDeltaDvol("c", ATMStrike, kStrike, T, r, b, ATMVol)
+volgaK = DVegaDVol("c", ATMStrike, kStrike, T, r, b, ATMVol)
+vannaK = DDeltaDVol("c", ATMStrike, kStrike, T, r, b, ATMVol)
 
 
 weight1 = (vegaK / vega1) * ((log(ATMStrike / kStrike) * log(callStrike / kStrike)) / (log(ATMStrike / putStrike) * log(callStrike / putStrike)))
