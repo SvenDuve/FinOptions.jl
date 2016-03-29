@@ -5,9 +5,11 @@ function Black76(CallPutFlag, F, X, T, r, v)
   d2 = d1 - v * sqrt(T)
 
   if CallPutFlag == "c"
-    BS = exp(-r * T) * (F * CND(d1) - X * CND(d2))
+          exp(-r * T) * (F * CND(d1) - X * CND(d2))
   elseif CallPutFlag == "p"
-    BS = exp(-r * T) * (X * CND(-d2) - F * CND(-d1))
+          exp(-r * T) * (X * CND(-d2) - F * CND(-d1))
+  else
+          println(STDERR, "Falsche Eingabe! Abbruch")
   end
 
 end

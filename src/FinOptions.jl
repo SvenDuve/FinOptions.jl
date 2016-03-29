@@ -26,7 +26,8 @@ export
         Speed,
         StrikeDelta,
         RNDensity,
-        PutCallParity
+        PutCallParity,
+        VannaVolga
 
 
 include("Black76.jl")
@@ -37,6 +38,7 @@ include("GBlackScholes.jl")
 include("GDelta.jl")
 include("Greeks.jl")
 include("PutCallParity.jl")
+include("VannaVolga.jl")
 
 # package code goes here
 
