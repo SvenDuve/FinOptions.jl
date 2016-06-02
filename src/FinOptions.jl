@@ -27,7 +27,8 @@ export
         StrikeDelta,
         RNDensity,
         PutCallParity,
-        VannaVolga
+        VannaVolga,
+        SwingOptionPricer
 
 
 include("Black76.jl")
@@ -39,6 +40,7 @@ include("GDelta.jl")
 include("Greeks.jl")
 include("PutCallParity.jl")
 include("VannaVolga.jl")
+include("SwingOptionPricer.jl")
 
 # package code goes here
 
