@@ -1,4 +1,4 @@
-function SwingOptionPricerSD(K, T, SMA, SDA, days, Strike, sigMA, sigDA, rho, r, div1, div2, N, M)
+function SwingOptionPricer(K, T, SMA, SDA, days, Strike, sigMA, sigDA, rho, r, div1, div2, N, M)
 
 ## setting parameters
 
