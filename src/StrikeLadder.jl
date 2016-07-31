@@ -16,7 +16,7 @@ function StrikeLadder(CallPutFlag, MarketPrice, CenterStrike, T, VVInput)
 
 LowerStrike = CenterStrike - 5
 UpperStrike = CenterStrike + 5
-StrikePrices = [LowerStrike:0.5:UpperStrike]
+StrikePrices = collect(LowerStrike:0.5:UpperStrike)
 
 
 SensitivityMatrix = zeros(Float64, length(StrikePrices), 7)
