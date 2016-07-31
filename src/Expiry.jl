@@ -31,7 +31,7 @@ Nov18 = Dates.days(Date(2018, 10, 26)-today())/365
 Dec18 = Dates.days(Date(2018, 11, 26)-today())/365
 
 
-#=
+
 Q416 = [Oct16, Nov16, Dec16]
 Q117 = [Jan17, Feb17, Mar17]
 Q217 = [Apr17, May17, Jun17]
@@ -46,7 +46,6 @@ W16 = [Q416, Q117]
 S17 = [Q217, Q317]
 W17 = [Q417, Q118]
 S18 = [Q218, Q318]
-=#
 
 # Date(2017,12) - Dates.Day(7)
 # Dates.dayofweek(Date(2017,10) - Dates.Day(5))

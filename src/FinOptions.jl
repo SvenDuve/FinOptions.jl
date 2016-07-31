@@ -37,7 +37,13 @@ export
         SwingOptionPricer,
         StrikeLadder,
         VVParams,
-        Expiry
+        Aug16, Sep16, Oct16, Nov16, Dec16,
+        Jan17, Feb17, Mar17, Apr17, May17, Jun17,
+        Jul17, Aug17, Sep17, Oct17, Nov17, Dec17,
+        Jan18, Feb18, Mar18, Apr18, May18, Jun18,
+        Jul18, Aug18, Sep18, Oct18, Nov18, Dec18,
+        Q416, Q117, Q217, Q317, Q417, Q118, Q218, Q318, Q418,
+        W16, S17, W17, S18
 
 
 
