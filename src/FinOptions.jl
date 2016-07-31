@@ -36,8 +36,7 @@ export
         VannaVolga,
         SwingOptionPricer,
         StrikeLadder,
-        VVParams,
-        Oct16 = Dates.days(Date(2016, 9, 26)-today())/365
+        VVParams
 
 
 
