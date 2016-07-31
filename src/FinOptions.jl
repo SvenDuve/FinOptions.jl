@@ -35,7 +35,10 @@ export
         PutCallParity,
         VannaVolga,
         SwingOptionPricer,
-        StrikeLadder
+        StrikeLadder,
+        VVParams,
+        Oct16 = Dates.days(Date(2016, 9, 26)-today())/365
+
 
 
 include("Black76.jl")
@@ -62,8 +65,6 @@ type VVParams
         callVol
 end
 
-Sep16 = Dates.days(Date(2016, 8, 26)-today())/365
-Oct16 = Dates.days(Date(2016, 9, 26)-today())/365
 
 
 end # module
