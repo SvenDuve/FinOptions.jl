@@ -48,6 +48,7 @@ include("Greeks.jl")
 include("PutCallParity.jl")
 include("VannaVolga.jl")
 include("SwingOptionPricer.jl")
+include("StrikeLadder.jl")
 include("Expiry.jl")
 
 # package code goes here
