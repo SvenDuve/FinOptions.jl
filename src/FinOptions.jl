@@ -1,5 +1,11 @@
 module FinOptions
 
+## Dependencies
+
+using DataArrays
+using DataFrames
+using Base.Dates
+
 export
 
         Black76,
@@ -28,7 +34,8 @@ export
         RNDensity,
         PutCallParity,
         VannaVolga,
-        SwingOptionPricer
+        SwingOptionPricer,
+        StrikeLadder
 
 
 include("Black76.jl")
@@ -41,6 +48,7 @@ include("Greeks.jl")
 include("PutCallParity.jl")
 include("VannaVolga.jl")
 include("SwingOptionPricer.jl")
+include("Expiry.jl")
 
 # package code goes here
 
