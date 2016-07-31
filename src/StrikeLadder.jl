@@ -25,15 +25,15 @@ SensitivityMatrix = zeros(Float64, length(StrikePrices), 7)
 SensitivityMatrix[:,1] = StrikePrices
 SensitivityMatrix[:,2] = 0.25
 
-for i in 1:length(StrikePrices) SensitivityMatrix[i,3] = Black76("c", MarketPrice, StrikePrices[i], 1/12, 0.05, SensitivityMatrix[i,2]) end
+for i in 1:length(StrikePrices) SensitivityMatrix[i,3] = Black76(CallPutFlag, MarketPrice, StrikePrices[i], T, 0.05, SensitivityMatrix[i,2]) end
 
-for i in 1:length(StrikePrices) SensitivityMatrix[i,4] = VannaVolga(VVInput.putStrike, VVInput.ATMStrike, VVInput.callStrike, StrikePrices[i], CallPutFlag, 1, 0.05, 0, VVInput.putVol, VVInput.ATMVol, VVInput.callVol)[2] end
+for i in 1:length(StrikePrices) SensitivityMatrix[i,4] = VannaVolga(VVInput.putStrike, VVInput.ATMStrike, VVInput.callStrike, StrikePrices[i], CallPutFlag, T, 0.05, 0, VVInput.putVol, VVInput.ATMVol, VVInput.callVol)[2] end
 
-for i in 1:length(StrikePrices) SensitivityMatrix[i,5] = Black76("c", MarketPrice, StrikePrices[i], 1/12, 0.05, SensitivityMatrix[i,4]) end
+for i in 1:length(StrikePrices) SensitivityMatrix[i,5] = Black76(CallPutFlag, MarketPrice, StrikePrices[i], T, 0.05, SensitivityMatrix[i,4]) end
 
-for i in 1:length(StrikePrices) SensitivityMatrix[i,6] = Delta("c", MarketPrice, StrikePrices[i], 1/12, 0.05, 0, SensitivityMatrix[i,4]) end
+for i in 1:length(StrikePrices) SensitivityMatrix[i,6] = Delta(CallPutFlag, MarketPrice, StrikePrices[i], T, 0.05, 0, SensitivityMatrix[i,4]) end
 
-for i in 1:length(StrikePrices) SensitivityMatrix[i,7] = Gamma("c", MarketPrice, StrikePrices[i], 1/12, 0.05, 0, SensitivityMatrix[i,4]) end
+for i in 1:length(StrikePrices) SensitivityMatrix[i,7] = Gamma(CallPutFlag, MarketPrice, StrikePrices[i], T, 0.05, 0, SensitivityMatrix[i,4]) end
 
 
 SensitivityMatrix = DataFrame(SensitivityMatrix)
