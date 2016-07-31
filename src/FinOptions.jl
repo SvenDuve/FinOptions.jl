@@ -36,7 +36,8 @@ export
         VannaVolga,
         SwingOptionPricer,
         StrikeLadder,
-        VVParams
+        VVParams,
+        Sep16
 
 
 
