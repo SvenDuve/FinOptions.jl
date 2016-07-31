@@ -37,7 +37,7 @@ export
         SwingOptionPricer,
         StrikeLadder,
         VVParams,
-        Sep16
+        Expiry
 
 
 
