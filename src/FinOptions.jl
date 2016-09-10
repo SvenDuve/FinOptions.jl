@@ -10,6 +10,7 @@ export
 
         Black76,
         BlackScholes,
+        BlackScholesDP,
         GBlackScholes,
         KirkSpreadOption,
         GeoAveRate,
@@ -50,6 +51,7 @@ export
 
 include("Black76.jl")
 include("BlackScholes.jl")
+include("BlackScholesDP.jl")
 include("CND.jl")
 #include("CNDEV.jl"),
 include("GBlackScholes.jl")
