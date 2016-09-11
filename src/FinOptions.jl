@@ -32,6 +32,7 @@ export
         Carry,
         Speed,
         StrikeDelta,
+        SABRVolatility,
         RNDensity,
         PutCallParity,
         VannaVolga,
@@ -58,6 +59,7 @@ include("GBlackScholes.jl")
 include("GDelta.jl")
 include("Greeks.jl")
 include("PutCallParity.jl")
+include("SABR.jl")
 include("VannaVolga.jl")
 include("SwingOptionPricer.jl")
 include("StrikeLadder.jl")
